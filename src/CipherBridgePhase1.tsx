@@ -2,10 +2,10 @@ import { useState } from 'react';
 import CipherBridge from './CipherBridge';
 
 interface CipherBridgePhase1Props {
-  
+  onPhaseComplete: () => void;
 }
 
-function CipherBridgePhase1({}: CipherBridgePhase1Props) {
+function CipherBridgePhase1({ onPhaseComplete }: CipherBridgePhase1Props) {
   const [currentPhase, setCurrentPhase] = useState(1);
   const [allCompleted, setAllCompleted] = useState(false);
 
@@ -16,6 +16,8 @@ function CipherBridgePhase1({}: CipherBridgePhase1Props) {
     } else {
       // Both phases completed
       setAllCompleted(true);
+      // Call the parent's onPhaseComplete callback when all phases are completed
+      onPhaseComplete();
     }
   };
 
