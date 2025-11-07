@@ -61,13 +61,7 @@ function CipherBridge({ onPhaseComplete, phase }: CipherBridgeProps) {
     onPhaseComplete();
   };
 
-  // Reset the cipher bridge
-  const resetPuzzle = () => {
-    setUserInput('');
-    setShowError(false);
-    setTimeLeft(0);
-    setIsUnlocked(false);
-  };
+
 
   // Main application UI
   return (

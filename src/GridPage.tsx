@@ -33,11 +33,7 @@ function GridPage({ onGridComplete }: GridPageProps) {
     }
   };
 
-  // Reset the entire puzzle to initial state
-  const resetPuzzle = () => {
-    setCurrentPhase(0);
-    setPuzzleComplete(false);
-  };
+  
 
   // Main application UI
   return (

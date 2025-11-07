@@ -3,10 +3,10 @@ import React from 'react';
 interface ErrorModalProps {
   isOpen: boolean;
   timeLeft: number;
-  onClose: () => void;
+  
 }
 
-const ErrorModal: React.FC<ErrorModalProps> = ({ isOpen, timeLeft, onClose }) => {
+const ErrorModal: React.FC<ErrorModalProps> = ({ isOpen, timeLeft }) => {
   if (!isOpen) return null;
 
   return (

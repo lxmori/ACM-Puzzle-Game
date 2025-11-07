@@ -87,7 +87,7 @@ const Grid: React.FC<GridProps> = ({ currentPhase, onPhaseComplete }) => {
 
   // Handle countdown timer for the entire grid
   useEffect(() => {
-    let gridTimer: NodeJS.Timeout | null = null;
+    let gridTimer: ReturnType<typeof setInterval> | null = null;
     
     if (isGridDisabled && showErrorModal && errorTimeLeft > 0) {
       gridTimer = setInterval(() => {
